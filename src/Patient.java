@@ -1,13 +1,13 @@
 public class Patient {
 
-    public int ıd ;
+     static int id ;
     public String namesurname ;
     public int severity ;
     public int age ;
 
-    public Patient(int ıd ,String namesurname,int severity,int age){
+    public Patient(int id ,String namesurname,int severity,int age){
 
-        this.ıd = ıd;
+        this.id = id;
         this.namesurname = namesurname;
         this.severity = severity;
         this.age =age ;

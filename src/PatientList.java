@@ -10,14 +10,11 @@ public class PatientList {
 
 
         Node(Patient d){
-
             data = d ;
             next = null ;
         }
-
     }
-
-    public boolean ısEmpty(){
+    public boolean isEmpty(){
 
         return (head == null) ;
     }
@@ -28,19 +25,15 @@ public class PatientList {
 
         Node new_node = new Node(data);
 
+    }
 
-
-
+    public void removePatient(int id){
 
     }
 
-    public void removePatient(int ıd){
+    public int findPatient(int id){
 
-    }
-
-    public int findPatient(int ıd){
-
-        return ıd;
+        return id;
     }
 
     public void printPatientList(Patient data ){
