@@ -1,7 +1,8 @@
 
 public class PatientList {
-
+    Node tail;
     Node head ;
+    int size = 0;
 
     public static class Node {
 
@@ -22,21 +23,38 @@ public class PatientList {
 
 
     public void addPatient(Patient data){
-
-        Node new_node = new Node(data);
+        Node newNode = new Node(data);
+        tail.next = newNode;
+        tail = newNode ;
+        size++ ;
 
     }
 
     public void removePatient(int id){
 
+
     }
 
-    public int findPatient(int id){
+    public String findPatient(int id){
+        id =Patient.id;
+        while(head != null){
+            if(head.data == id){
+                return Patient.namesurname;
+            }
 
-        return id;
+            head = head.next ;
+        }
+
+
     }
 
     public void printPatientList(Patient data ){
+        Node temp = head ;
+
+        while(temp != null){
+            System.out.println(temp.data + " --->");
+
+        }
 
     }
 

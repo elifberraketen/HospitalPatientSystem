@@ -1,7 +1,7 @@
 public class Patient {
 
-     static int id ;
-    public String namesurname ;
+    static int id ;
+    public static String namesurname ;
     public int severity ;
     public int age ;
 
