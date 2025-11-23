@@ -1,9 +1,9 @@
 public class TreatmentQueue {
     class Node{
-        int data ;
+        TreatmentRequest data ;
         Node next ;
 
-       public Node(int data){
+       public Node(TreatmentRequest data){
             this.data =data ;
             this.next =null;
         }
@@ -18,8 +18,8 @@ public class TreatmentQueue {
         this.front = null ;
     }
 
-    public void enqueue(int data ){
-        Node newNode = new Node(data);
+    public void enqueue(TreatmentRequest request ){
+        Node newNode = new Node(request);
         if (end == null){
             front = end = newNode ;
         }
@@ -28,12 +28,13 @@ public class TreatmentQueue {
         size++ ;
     }
 
-    public int dequeue(){
+    public TreatmentRequest dequeue(){
         if (end == null){
             System.out.println("It's already empty !");
-            return -1;
+            return null ;
         }
-        int temp =front.data ;
+
+        TreatmentRequest temp =front.data ;
         front =front.next ;
         size --;
         return temp;

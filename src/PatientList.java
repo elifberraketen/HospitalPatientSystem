@@ -16,14 +16,17 @@ public class PatientList {
         }
     }
     public boolean isEmpty(){
-
         return (head == null) ;
     }
 
-
-
     public void addPatient(Patient data){
         Node newNode = new Node(data);
+        if (head ==null){
+            head =newNode;
+            return;
+        }
+        Node temp =head;
+        
         tail.next = newNode;
         tail = newNode ;
         size++ ;
@@ -31,21 +34,30 @@ public class PatientList {
     }
 
     public void removePatient(int id){
+        if (head == null){
+            System.out.println("List is empty !");
+        }
+        Node current = head;
+
+        while (current != null  && current.data.id !=id){
+            current =current.next ;
+
+        }
+        if (current ==null){
+            System.out.println("Patient yok");
+        }
 
 
     }
 
-    public String findPatient(int id){
+    public Patient findPatient(int id){
         id =Patient.id;
         while(head != null){
-            if(head.data == id){
+            if(head.data = id){
                 return Patient.namesurname;
             }
-
             head = head.next ;
         }
-
-
     }
 
     public void printPatientList(Patient data ){
@@ -53,6 +65,7 @@ public class PatientList {
 
         while(temp != null){
             System.out.println(temp.data + " --->");
+            temp = temp.next ;
 
         }
 
