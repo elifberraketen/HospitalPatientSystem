@@ -1,9 +1,14 @@
 public class DischargeRecord {
-    int patientid = Patient.id;
+    int patientId = Patient.id;
     long dischargeTime ;
 
     DischargeRecord(long dischargeTime){
         this.dischargeTime =dischargeTime ;
     }
+
+    public String toString() {
+        return "Discharge: patientId= " + patientId + ", time= " + dischargeTime;
+    }
+
 }
 

@@ -1,8 +1,8 @@
 public class Patient {
 
-    static int id ;
+    static int id ;  //priv mi olmalı
     public static String namesurname ;
-    public int severity ;
+    public int severity ; //priv getter ile değer aralığı kontrol edilir mi
     public int age ;
 
     public Patient(int id ,String namesurname,int severity,int age){
@@ -11,6 +11,13 @@ public class Patient {
         this.namesurname = namesurname;
         this.severity = severity;
         this.age =age ;
+    }
+
+    public String toString() {
+        return "Patient id= " + id +
+                " name and surname= " + namesurname +
+                ", severity= " + severity +
+                ", age= " + age;
     }
 
 

@@ -1,9 +1,13 @@
 public class TreatmentRequest {
-    int patiendId ;
+    int patientId ;
     long arrivalTime ;
 
     TreatmentRequest(int patientId){
-        this.patiendId =Patient.id;
+        this.patientId =Patient.id;
         this.arrivalTime =System.currentTimeMillis() ;
+    }
+    public String toString() {
+        return "Request patientId= " + patientId +
+                ", arrivalTime= " + arrivalTime ;
     }
 }

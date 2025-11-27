@@ -23,9 +23,11 @@ public class TreatmentQueue {
         if (end == null){
             front = end = newNode ;
         }
-        end.next = newNode ;
-        end =newNode ;
-        size++ ;
+        else {
+            end.next = newNode;
+            end = newNode;
+            size++;
+        }
     }
 
     public TreatmentRequest dequeue(){
