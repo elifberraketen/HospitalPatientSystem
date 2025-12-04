@@ -7,7 +7,7 @@ public class TreatmentRequest {
         this.arrivalTime =System.currentTimeMillis() ;
     }
     public String toString() {
-        return "Request patientId= " + patientId +
-                ", arrivalTime= " + arrivalTime ;
+        return "patient Id= " + patientId +
+                ",arrival Time= " + arrivalTime ;
     }
 }

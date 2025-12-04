@@ -2,8 +2,9 @@ public class DischargeRecord {
     int patientId ;
     long dischargeTime ;
 
-    DischargeRecord(long dischargeTime){
-        this.dischargeTime =dischargeTime ;
+    DischargeRecord(int patientId){
+        this.patientId=patientId;
+        this.dischargeTime =System.currentTimeMillis();
     }
 
     public String toString() {

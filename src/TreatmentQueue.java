@@ -31,7 +31,7 @@ public class TreatmentQueue {
     }
 
     public TreatmentRequest dequeue(){
-        if (end == null){
+        if (front == null){
             System.out.println("It's already empty !");
             return null ;
         }
