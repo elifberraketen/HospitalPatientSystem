@@ -23,9 +23,9 @@ public class PatientList {
         if (head ==null){
             head =newNode;
             tail =newNode;
+            size++;
             return;
         }
-        Node temp =head;
         
         tail.next = newNode;
         tail = newNode ;
@@ -44,30 +44,44 @@ public class PatientList {
             current =current.next ;
 
         }
-        System.out.println("Patient with " +id+ "id is removed.");
 
-        if (current ==null){
-            System.out.println("Patient yok");
+        if (current == null) {
+            System.out.println("Patient with id " + id + " not found!");
         }
+        if(current.data.id== id){
+
+            if(prev==null){
+                head = head.next;
+            }
+            else{
+                prev.next = current.next;
+            }
+            System.out.println("Patient with" +id + " id is removed from list.");
+            return;
+        }
+        System.out.println("No patient found with id" + id);
         size --;
     }
 
-   /* public Patient findPatient(int id){   //????
-        Node current =head;
-        while(head != null){
-            if(current.data = id){
+    public Patient findPatient(int id){   //????
+        Node current = head;
+        while(current != null){
+            if( current.data.id == id){
                 return current.data;
             }
-            head = head.next ;
+            current =current.next ;
         }
-    }*/
+        return null; //returning an object
+    }
 
     public void printPatientList( ){
         Node temp = head ;
+        int num =1;
 
         while(temp != null){
-            System.out.println(temp.data + " ---> ");
+            System.out.println(num +"."+ temp.data );
             temp = temp.next ;
+            num++;
 
         }
 

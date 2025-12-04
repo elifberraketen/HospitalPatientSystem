@@ -3,7 +3,7 @@ public class TreatmentRequest {
     long arrivalTime ;
 
     TreatmentRequest(int patientId){
-        this.patientId =Patient.id;
+        this.patientId =patientId;
         this.arrivalTime =System.currentTimeMillis() ;
     }
     public String toString() {

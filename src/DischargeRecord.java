@@ -1,5 +1,5 @@
 public class DischargeRecord {
-    int patientId = Patient.id;
+    int patientId ;
     long dischargeTime ;
 
     DischargeRecord(long dischargeTime){

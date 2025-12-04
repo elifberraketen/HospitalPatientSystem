@@ -1,7 +1,7 @@
 public class Patient {
 
-    static int id ;  //priv mi olmalı
-    public static String namesurname ;
+     int id ;  //priv mi olmalı
+    public  String namesurname ;
     public int severity ; //priv getter ile değer aralığı kontrol edilir mi
     public int age ;
 

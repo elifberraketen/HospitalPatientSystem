@@ -26,8 +26,8 @@ public class TreatmentQueue {
         else {
             end.next = newNode;
             end = newNode;
-            size++;
         }
+        size++;
     }
 
     public TreatmentRequest dequeue(){
@@ -48,7 +48,7 @@ public class TreatmentQueue {
 
     public void printQueue(){
         Node current = front ;
-        while(current == null){
+        while(current != null){
             System.out.println(current.data);
             current =current.next ;
         }
