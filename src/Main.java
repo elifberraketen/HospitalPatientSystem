@@ -10,21 +10,39 @@ public class Main {
 
 
         list.removePatient(126);
-        list.findPatient(125);
+        Patient lookingFor =list.findPatient(126);
+
+        if (lookingFor!= null)
+            System.out.println(lookingFor);
+        else
+            System.out.println("Patient not found in the patient list");
+
+
         list.printPatientList();
 
         System.out.println("------------------------");
 
         TreatmentQueue queue1 = new TreatmentQueue();
 
-        for (int i =1;i<= 8; i++) {
-            queue1.enqueue(new TreatmentRequest(123+ i));
-        }
+        queue1.enqueue(new TreatmentRequest( 100));
+        queue1.enqueue(new TreatmentRequest( 101));
+        queue1.enqueue(new TreatmentRequest( 102));
+        queue1.enqueue(new TreatmentRequest( 103));
+        queue1.enqueue(new TreatmentRequest( 104));
+        queue1.enqueue(new TreatmentRequest( 105));
+        queue1.enqueue(new TreatmentRequest( 106));
+        queue1.enqueue(new TreatmentRequest( 107));
+
 
         for (int i=0 ; i<=2;i++ ){
             System.out.println("Dequeued part: "+queue1.dequeue());
         }
+        System.out.println();
+        System.out.println("Remaining Queue: ");
+        System.out.println();
+
         queue1.printQueue();
+
 
         System.out.println("------------------------");
 

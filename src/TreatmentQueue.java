@@ -46,11 +46,13 @@ public class TreatmentQueue {
         return size ;
     }
 
+    //print the whole queue and its size
     public void printQueue(){
         Node current = front ;
         while(current != null){
             System.out.println(current.data);
             current =current.next ;
         }
+        System.out.println("Size of the queue= "+size());
     }
 }

@@ -8,7 +8,10 @@ public class DischargeRecord {
     }
 
     public String toString() {
-        return "Discharge: patientId= " + patientId + ", time= " + dischargeTime;
+
+        return "Discharge : " +
+                "patientId = " + patientId +
+                " time = " + dischargeTime;
     }
 
 }

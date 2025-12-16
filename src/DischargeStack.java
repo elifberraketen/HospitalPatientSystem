@@ -22,7 +22,7 @@ public class DischargeStack {
 
     public DischargeRecord pop(){
         if (top == null){
-            System.out.println("Stack is empty!");
+            System.out.println("Record stack is empty");
             return null;
         }
         DischargeRecord temp =top.data;
@@ -34,7 +34,7 @@ public class DischargeStack {
     }
     public void printStack(){
         if (top == null){
-            System.out.println("Stack is empty!");
+            System.out.println("Record stack is empty");
         }
         Node current =top ;
         while (current != null){

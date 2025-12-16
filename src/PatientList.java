@@ -14,13 +14,10 @@ public class PatientList {
             this.next = null ;
         }
     }
-    public boolean isEmpty(){
-        return (head == null) ;
-    }
 
     public void addPatient(Patient data){
-        Node newNode = new Node(data); //listede sona eklenir
-        if (head ==null){
+        Node newNode = new Node(data);
+        if (head ==null){    //this means our list is empty
             head =newNode;
             tail =newNode;
             size++;
@@ -35,18 +32,15 @@ public class PatientList {
 
     public void removePatient(int id){
         if (head == null){
-            System.out.println("There is no patient in the list!");
+            System.out.println("There is no patient in the list");
         }
         Node current = head;
         Node prev =null;
-        while (current != null  && current.data.id !=id){
+
+        while (current != null && current.data.id!=id){  //searching for given id
             prev=current;
             current =current.next ;
 
-        }
-
-        if (current == null) {
-            System.out.println("Patient with id " + id + " not found!");
         }
         if(current.data.id== id){
 
@@ -56,32 +50,30 @@ public class PatientList {
             else{
                 prev.next = current.next;
             }
-            System.out.println("Patient with" +id + " id is removed from list.");
-            return;
+            System.out.println("Patient with " +id + " id is removed from list.");
         }
-        System.out.println("No patient found with id" + id);
         size --;
     }
 
-    public Patient findPatient(int id){   //????
+    public Patient findPatient(int id){
         Node current = head;
         while(current != null){
             if( current.data.id == id){
-                return current.data;
+                return current.data;  //returning a Patient object
             }
             current =current.next ;
         }
-        return null; //returning an object
+        return null;
     }
 
     public void printPatientList( ){
         Node temp = head ;
-        int num =1;
+        int count =1;
 
         while(temp != null){
-            System.out.println(num +"."+ temp.data );
+            System.out.println(count +"."+temp.data );
             temp = temp.next ;
-            num++;
+            count++;
 
         }
 
