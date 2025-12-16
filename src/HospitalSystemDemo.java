@@ -8,7 +8,6 @@ public class HospitalSystemDemo {
     TreatmentQueue normalTreatmentQueue = new TreatmentQueue();
     HashMap<Integer, Patient> patientHashMap = new HashMap<Integer, Patient>();
 
-
     public void addPatient(Patient patient){
         patientList.addPatient(patient);
         patientHashMap.put(patient.id,patient);
