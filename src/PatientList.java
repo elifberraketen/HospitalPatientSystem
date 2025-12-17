@@ -78,5 +78,19 @@ public class PatientList {
         }
 
     }
+    public void bubblePriortySort(){
+        Node i;
+        Node j;
+
+        for(i =head  ;i!= null ; i=i.next){
+            for(j = head ; j.next!=null ;j =j.next){
+                if (j.data.severity> j.next.data.severity){
+                    Patient current =j.data;
+                    j.data=j.next.data;
+                    j.next.data= current;
+                }
+            }
+        }
+    }
 
 }

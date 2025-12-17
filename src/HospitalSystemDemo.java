@@ -34,6 +34,24 @@ public class HospitalSystemDemo {
            dischargeStack.push( new DischargeRecord(request.patientId));
        }
    }
+   public void printCurrentState(){
+       System.out.println("Patient List: ");
+       patientList.printPatientList();
+
+       System.out.println("Priority patient queue :");
+       priorityQueue.printQueue();
+
+       System.out.println("Patient queue : ");
+       normalTreatmentQueue.printQueue();
+
+       System.out.println("Discharged patients :");
+       dischargeStack.printStack();
+   }
+
+
+
+
+
 
 
 }
