@@ -60,52 +60,10 @@ public class Main {
 
         stack.printStack();
 
-        System.out.println("-------------HOSPITAl SYSTEM---------------");
-
-        HospitalSystemDemo hospital = new HospitalSystemDemo();
-        hospital.addPatient(new Patient(101, "Ali", 7, 45));
-        hospital.addPatient(new Patient(202, "Ayşe", 3, 30));
-        hospital.addPatient(new Patient(303, "Mehmet", 9, 60));
-        hospital.addPatient(new Patient(404, "Zeynep", 5, 25));
-        hospital.addPatient(new Patient(505, "Can", 6, 50));
-        hospital.addPatient(new Patient(606, "Elif", 4, 35));
-        hospital.addPatient(new Patient(707, "Murat", 8, 55));
-        hospital.addPatient(new Patient(808, "Ece", 2, 20));
-        hospital.addPatient(new Patient(909, "Ahmet", 10, 70));
-        hospital.addPatient(new Patient(1000, "Selin", 1, 18));
-
-        // 2️⃣ Add treatment requests
-        hospital.addTreatmentRequest(new TreatmentRequest(1), false);
-        hospital.addTreatmentRequest(new TreatmentRequest(2), false);
-        hospital.addTreatmentRequest(new TreatmentRequest(3), true);  // priority
-        hospital.addTreatmentRequest(new TreatmentRequest(4), false);
-        hospital.addTreatmentRequest(new TreatmentRequest(5), true);  // priority
-        hospital.addTreatmentRequest(new TreatmentRequest(6), false);
-        hospital.addTreatmentRequest(new TreatmentRequest(7), true);  // priority
-        hospital.addTreatmentRequest(new TreatmentRequest(8), false);
-
-        // 3️⃣ Add 2 discharge records (manual)
-        hospital.dischargeStack.push(new DischargeRecord(99));
-        hospital.dischargeStack.push(new DischargeRecord(100));
-
-        // 4️⃣ Sort patients by severity BEFORE treatment
-        System.out.println("Patients sorted by severity:");
-        hospital.sortPatientsBySeverity();
-
-        // 5️⃣ Process 4 treatment requests (priority first)
-        System.out.println("\nProcessing treatment requests...");
-        hospital.processTreatment();
-        hospital.processTreatment();
-        hospital.processTreatment();
-        hospital.processTreatment();
-
-        // 6️⃣ Print final system state
-        System.out.println("\nFINAL SYSTEM STATE:");
-        hospital.printSystemState();
     }
 }
 
-    }
 
 
-}
+
+
