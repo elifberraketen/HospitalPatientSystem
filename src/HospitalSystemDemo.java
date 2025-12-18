@@ -37,13 +37,16 @@ public class HospitalSystemDemo {
    public void printCurrentState(){
        System.out.println("Patient List: ");
        patientList.printPatientList();
+       System.out.println("\n_-_-_-_-_-_-_-_-_-");
 
        System.out.println("Priority patient queue :");
        priorityQueue.printQueue();
 
+       System.out.println("\n_-_-_-_-_-_-_-_-_-");
        System.out.println("Patient queue : ");
        normalTreatmentQueue.printQueue();
 
+       System.out.println("\n_-_-_-_-_-_-_-_-_-");
        System.out.println("Discharged patients :");
        dischargeStack.printStack();
    }
@@ -63,7 +66,7 @@ public class HospitalSystemDemo {
         hospital.addPatient(new Patient(909, "Mustafa Bitki", 10, 78));
         hospital.addPatient(new Patient(1000, "Selin Bitki", 6, 18));
 
-        System.out.println("__System Request__ :"); //priority handling part
+
         hospital.priorityTreatmentQueue(new TreatmentRequest(1), false);
         hospital.priorityTreatmentQueue(new TreatmentRequest(2), false);
         hospital.priorityTreatmentQueue(new TreatmentRequest(3), true);  // has a priority
@@ -78,18 +81,17 @@ public class HospitalSystemDemo {
         hospital.dischargeStack.push(new DischargeRecord(100));
 
 
-        System.out.println("\n_-_-_-_-_-_-_-_-_-");
+
         hospital.patientList.bubblePriortySort();
 
 
-        System.out.println("\n_-_-_-_-_-_-_-_-_-");
+
         hospital.severityHandling();
         hospital.severityHandling();
         hospital.severityHandling();
         hospital.severityHandling();
 
 
-        System.out.println("\nSystem State: ");
         hospital.printCurrentState();
     }
 
