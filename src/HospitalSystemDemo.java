@@ -76,7 +76,7 @@ public class HospitalSystemDemo {
         hospital.priorityTreatmentQueue(new TreatmentRequest(7), true);  // has a priority
         hospital.priorityTreatmentQueue(new TreatmentRequest(8), false);
 
-        System.out.println("\n_-_-_-_-_-_-_-_-_-");
+        System.out.println("_-_-_-_-_-_-_-_-_-");
         hospital.dischargeStack.push(new DischargeRecord(99));
         hospital.dischargeStack.push(new DischargeRecord(100));
 
@@ -94,10 +94,5 @@ public class HospitalSystemDemo {
 
         hospital.printCurrentState();
     }
-
-
-
-
-
 
 }
