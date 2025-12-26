@@ -29,7 +29,7 @@ public class PatientList {
         size++ ;
 
     }
-
+    //Remove patient by id
     public void removePatient(int id){
         if (head == null){
             System.out.println("There is no patient in the list");
@@ -54,7 +54,7 @@ public class PatientList {
         }
         size --;
     }
-
+//Find the patient by its id
     public Patient findPatient(int id){
         Node current = head;
         while(current != null){
@@ -65,6 +65,7 @@ public class PatientList {
         }
         return null;
     }
+
 
     public void printPatientList( ){
         Node temp = head ;
@@ -77,6 +78,7 @@ public class PatientList {
 
         }
 
+        //Sorting the patients
     }
     public void bubblePriortySort(){
         Node i;

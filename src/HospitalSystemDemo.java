@@ -13,6 +13,7 @@ public class HospitalSystemDemo {
         patientHashMap.put(patient.id,patient);
     }
 
+    //Queue with a priority
     public void priorityTreatmentQueue(TreatmentRequest request ,boolean priority){
         if(priority){
             priorityQueue.enqueue(request);
@@ -21,6 +22,7 @@ public class HospitalSystemDemo {
             normalTreatmentQueue.enqueue(request);
         }
     }
+
 
    public void severityHandling(){
        TreatmentRequest request;

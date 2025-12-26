@@ -18,6 +18,7 @@ public class TreatmentQueue {
         this.front = null ;
     }
 
+    //add a new request to the line
     public void enqueue(TreatmentRequest request ){
         Node newNode = new Node(request);
         if (end == null){
@@ -30,6 +31,7 @@ public class TreatmentQueue {
         size++;
     }
 
+    //delete the request
     public TreatmentRequest dequeue(){
         if (front == null){
             System.out.println("It's already empty !");

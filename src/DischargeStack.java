@@ -13,6 +13,7 @@ public class DischargeStack {
     }
     Node top ;
 
+    //Add new record to the top
     public void push (DischargeRecord record){
         Node newNode = new Node(record);
         newNode.data =record ;
@@ -20,6 +21,7 @@ public class DischargeStack {
         top = newNode ;
     }
 
+    //Deleting the last record
     public DischargeRecord pop(){
         if (top == null){
             System.out.println("Record stack is empty");
